@@ -37,7 +37,7 @@ public class BookingController {
         }
         bookingService.addBooking(booking);
         return ResponseEntity
-                .status(HttpStatus.OK)
+                .status(HttpStatus.CREATED)
                 .body(bookingService.getBookingList());
     }
 }
