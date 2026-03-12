@@ -11,27 +11,27 @@ Content-Type: application/json
   "reservationDate": "2025-09-05"
 }
 
-### Tenter de réserver la même chambre à la même date (→ 409 Conflict)
+### Tenter de réserver la même chambre à la même date (409 Conflict)
 POST http://localhost:8080/booking
 Content-Type: application/json
 
 {
   "clientName": "Rakoto",
   "phoneNumber": "0611223344",
-  "email": "bob@example.com",
+  "email": "Rakto@example.com",
   "roomNumber": 3,
   "roomDescription": "Chambre double vue mer",
   "reservationDate": "2025-09-05"
 }
 
-### Chambre hors intervalle (→ 400 Bad Request)
+### Chambre hors intervalle (400 Bad Request)
 POST http://localhost:8080/booking
 Content-Type: application/json
 
 {
   "clientName": "Rasoa",
   "phoneNumber": "0622334455",
-  "email": "charlie@example.com",
+  "email": "Rasoa@example.com",
   "roomNumber": 15,
   "roomDescription": "Chambre inexistante",
   "reservationDate": "2025-09-10"
